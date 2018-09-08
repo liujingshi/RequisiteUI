@@ -7,12 +7,15 @@
 
 * `RequisiteUI` 一款响应式框架
 
-        向网页的`<head>`标签添加下面这行代码
-        `<meta name="viewport" content="width=device-width">`
+    向网页的`<head>`标签添加下面这行代码
+
+        <meta name="viewport" content="width=device-width">
 
 * 开始使用
 
-        <!doctype html>
+    这是一个基本的页面
+
+        <!DOCTYPE html>
         <html>
             <head>
                 <meta charset="utf-8">
