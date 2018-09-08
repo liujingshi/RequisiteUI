@@ -1,116 +1,87 @@
+/**
+ * @name: RequisiteUI
+ * @author: 刘叔
+ * @host: www.requisiteUi
+ */
+
+
+/* 默认字体 */
+
+html, body {width: 100%;margin-top: 0px; margin-left: 0px;font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;}
+
+/* 默认字体 */
+
 
 /* 响应式布局 -- Start */
 
 @media screen and (max-width: 767px) {
-    .rui-layout {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    .rui-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    .rui-col1 {
-        width: 100%;
-    }
-    .rui-col2 {
-        width: 100%;
-    }
-    .rui-col3 {
-        width: 100%;
-    }
-    .rui-col4 {
-        width: 100%;
-    }
-    .rui-col5 {
-        width: 100%;
-    }
-    .rui-col6 {
-        width: 100%;
-    }
-    .rui-col7 {
-        width: 100%;
-    }
-    .rui-col8 {
-        width: 100%;
-    }
-    .rui-col9 {
-        width: 100%;
-    }
-    .rui-col10 {
-        width: 100%;
-    }
-    .rui-col11 {
-        width: 100%;
-    }
-    .rui-col12 {
-        width: 100%;
-    }
+    .rui-layout {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;width: 100%;}
+    .rui-row {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;width: 100%;}
+    .rui-col1 {width: 100%; margin-top: 10px;}
+    .rui-col2 {width: 100%; margin-top: 10px;}
+    .rui-col3 {width: 100%; margin-top: 10px;}
+    .rui-col4 {width: 100%; margin-top: 10px;}
+    .rui-col5 {width: 100%; margin-top: 10px;}
+    .rui-col6 {width: 100%; margin-top: 10px;}
+    .rui-col7 {width: 100%; margin-top: 10px;}
+    .rui-col8 {width: 100%; margin-top: 10px;}
+    .rui-col9 {width: 100%; margin-top: 10px;}
+    .rui-col10 {width: 100%; margin-top: 10px;}
+    .rui-col11 {width: 100%; margin-top: 10px;}
+    .rui-col12 {width: 100%; margin-top: 10px;}
 }
 
 @media screen and (min-width: 768px) {
-    .rui-layout {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    .rui-row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    }
-    .rui-col1 {
-        width: 8.33333333%;
-    }
-    .rui-col2 {
-        width: 16.66666667%;
-    }
-    .rui-col3 {
-        width: 25%;
-    }
-    .rui-col4 {
-        width: 33.33333333%;
-    }
-    .rui-col5 {
-        width: 41.66666667%;
-    }
-    .rui-col6 {
-        width: 50%;
-    }
-    .rui-col7 {
-        width: 58.33333333%;
-    }
-    .rui-col8 {
-        width: 66.66666667%;
-    }
-    .rui-col9 {
-        width: 75%;
-    }
-    .rui-col10 {
-        width: 83.33333333%;
-    }
-    .rui-col11 {
-        width: 91.66666667%;
-    }
-    .rui-col12 {
-        width: 100%;
-    }
+    .rui-layout {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;width: 100%;}
+    .rui-row {display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;width: 100%;}
+    .rui-col1 {width: 8.33333333%;}
+    .rui-col2 {width: 16.66666667%;}
+    .rui-col3 {width: 25%;}
+    .rui-col4 {width: 33.33333333%;}
+    .rui-col5 {width: 41.66666667%;}
+    .rui-col6 {width: 50%;}
+    .rui-col7 {width: 58.33333333%;}
+    .rui-col8 {width: 66.66666667%;}
+    .rui-col9 {width: 75%;}
+    .rui-col10 {width: 83.33333333%;}
+    .rui-col11 {width: 91.66666667%;}
+    .rui-col12 {width: 100%;}
 }
 
 /* 响应式布局 -- End */
+
+
+/* 颜色 -- Start */
+
+.rui-color-white {color: #FFFFFF;}
+.rui-color-red {color: #FFFFFF;}
+.rui-color-orange {color: #FFFFFF;}
+.rui-color-yellow {color: #FFFFFF;}
+.rui-color-green {color: #FFFFFF;}
+.rui-color-cyan {color: #FFFFFF;}
+.rui-color-blue {color: #FFFFFF;}
+.rui-color-purple {color: #FFFFFF;}
+.rui-color-gray {color: #FFFFFF;}
+.rui-color-black {color: #FFFFFF;}
+
+
+/* 颜色 -- End */
+
+
+/* 内容面板 -- Start */
+
+/* 手风琴 */
+
+details {cursor: pointer; background: rgba(240, 240, 240, 0.1); border-radius: 2px 2px 2px 2px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dddddd;}
+details > summary {padding: 0px 15px 0 20px; background: rgba(240, 240, 240, 0.8); outline: none;height: 40px; line-height: 40px;}
+details > section {padding: 10px 10px 10px 10px;}
+/*summary::-webkit-details-marker{display: none;} 这是屏蔽图标的(图标模块还么做暂时保留)*/
+
+/* 内容面板 -- End */
+
+
+/* 图标 -- Start */
+
+
+
+/* 图标 -- End */

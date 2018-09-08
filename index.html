@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>RequisiteUI</title>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="RequisiteUI/css/RequisiteUI.css">
-        <style>
-            .b {
-                box-sizing: border-box;
-                border: 2px solid green;
-                height: 300px;
-            }
-        </style>
-    </head>
-    <body>
+<html lang="CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>RequisiteUI</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="RequisiteUI/css/RequisiteUI.css">
+</head>
+
+<body>
+    <main>
         <div class="rui-layout">
             <div class="rui-row">
-                <div class="rui-col6 b"></div>
-                <div class="rui-col6 b"></div>
-                <div class="rui-col8 b"></div>
-                <div class="rui-col2 b"></div>
-                <div class="rui-col2 b"></div>
+                <div style="height: 50px;" class="rui-col12"></div>
+            </div>
+            <div class="rui-row">
+                <div class="rui-col1"></div>
+                <div class="rui-col4">
+                    <details open>
+                        <summary>默认打开手风琴</summary>
+                        <section>
+                            手风琴内容
+                        </section>
+                    </details>
+                </div>
+                <div class="rui-col2"></div>
+                <div class="rui-col4">
+                    <details>
+                        <summary>默认关闭手风琴</summary>
+                        <section>
+                            手风琴内容
+                        </section>
+                    </details>
+                </div>
+                <div class="rui-col1"></div>
             </div>
         </div>
-    </body>
-    <script src="RequisiteUI/common/jquery-3.3.1.min.js"></script>
-    <script src="RequisiteUI/js/Requisite.js"></script>
+    </main>
+</body>
+<script src="RequisiteUI/common/jquery-3.3.1.min.js"></script>
+<script src="RequisiteUI/js/Requisite.js"></script>
+
 </html>
