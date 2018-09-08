@@ -2,10 +2,10 @@
 ## 一款正在开发中的响应式前端框架
 * `2018-09-08`
     * 记录一下时间点 `RequisiteUI` 正式开始开发的时间
-* `RequisiteUI` 一款响应式框架
+* `RequisiteUI` 一款响应式框架 <br>
         向网页的`<head>`标签添加下面这行代码
         `<meta name="viewport" content="width=device-width">`
-* 开始使用
+* 开始使用 <br>
         <!doctype html>
         <html>
             <head>
