@@ -5,6 +5,7 @@
 * `2018-09-08`
     * 记录一下时间点 `RequisiteUI` 正式开始开发的时间
         * `刘叔` 一个神奇的人类 框架的开发者
+        * 官方网站 `requisiteui.com`
 
 * `RequisiteUI` 一款响应式框架
 
