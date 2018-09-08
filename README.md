@@ -45,6 +45,10 @@
     * 响应式布局规则
 
         将容器12等分进行布局 小屏幕移动设备占据100%
+
         `1.` 最外围使用 `class="rui-layout"` 示例: `<div class="rui-layout"></div>`
+
         `2.` 使用 `class="rui-row"` 定义行 示例: `<div class="rui-row"></div>`
+
         `3.` 使用 `class="rui-col*"` 定义列 变量`*` 代表12等分数 可选 1-12 示例: `<div class="rui-col6"></div>`
+        
