@@ -3,95 +3,113 @@
 
 @media screen and (max-width: 767px) {
     .rui-layout {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .rui-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .rui-col1 {
-        width: 100%
+        width: 100%;
     }
     .rui-col2 {
-        width: 100%
+        width: 100%;
     }
     .rui-col3 {
-        width: 100%
+        width: 100%;
     }
     .rui-col4 {
-        width: 100%
+        width: 100%;
     }
     .rui-col5 {
-        width: 100%
+        width: 100%;
     }
     .rui-col6 {
-        width: 100%
+        width: 100%;
     }
     .rui-col7 {
-        width: 100%
+        width: 100%;
     }
     .rui-col8 {
-        width: 100%
+        width: 100%;
     }
     .rui-col9 {
-        width: 100%
+        width: 100%;
     }
     .rui-col10 {
-        width: 100%
+        width: 100%;
     }
     .rui-col11 {
-        width: 100%
+        width: 100%;
     }
     .rui-col12 {
-        width: 100%
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 768px) {
     .rui-layout {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .rui-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .rui-col1 {
-        width: 8.33%
+        width: 8.33333333%;
     }
     .rui-col2 {
-        width: 16.66%
+        width: 16.66666667%;
     }
     .rui-col3 {
-        width: 25%
+        width: 25%;
     }
     .rui-col4 {
-        width: 33.33%
+        width: 33.33333333%;
     }
     .rui-col5 {
-        width: 41.65%
+        width: 41.66666667%;
     }
     .rui-col6 {
-        width: 50%
+        width: 50%;
     }
     .rui-col7 {
-        width: 58.31%
+        width: 58.33333333%;
     }
     .rui-col8 {
-        width: 66.66%
+        width: 66.66666667%;
     }
     .rui-col9 {
-        width: 75%
+        width: 75%;
     }
     .rui-col10 {
-        width: 83.33%
+        width: 83.33333333%;
     }
     .rui-col11 {
-        width: 91.63%
+        width: 91.66666667%;
     }
     .rui-col12 {
-        width: 100%
+        width: 100%;
     }
 }
 

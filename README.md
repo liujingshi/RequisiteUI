@@ -50,5 +50,5 @@
 
         `2.` 使用 `class="rui-row"` 定义行 示例: `<div class="rui-row"></div>`
 
-        `3.` 使用 `class="rui-col*"` 定义列 变量`*` 代表12等分数 可选 1-12 示例: `<div class="rui-col6"></div>`
+        `3.` 使用 `class="rui-col*"` 定义列 变量`*` 代表12等分数 可选 1-12 超出部分自动换行 示例: `<div class="rui-col6"></div>`
         
