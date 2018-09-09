@@ -54,15 +54,26 @@ html, body {width: 100%;margin-top: 0px; margin-left: 0px;font-family:"Microsoft
 /* 颜色 -- Start */
 
 .rui-color-white {color: #FFFFFF;}
-.rui-color-red {color: #FFFFFF;}
+.rui-color-red {color: #C9302C;}
 .rui-color-orange {color: #FFFFFF;}
-.rui-color-yellow {color: #FFFFFF;}
-.rui-color-green {color: #FFFFFF;}
-.rui-color-cyan {color: #FFFFFF;}
-.rui-color-blue {color: #FFFFFF;}
-.rui-color-purple {color: #FFFFFF;}
-.rui-color-gray {color: #FFFFFF;}
-.rui-color-black {color: #FFFFFF;}
+.rui-color-yellow {color: #E5B51C;}
+.rui-color-green {color: #449D44;}
+.rui-color-cyan {color: #007D3D;}
+.rui-color-blue {color: #337AB7;}
+.rui-color-skyblue {color: #31B0D5;}
+.rui-color-gray {color: #E6E6E6;}
+.rui-color-black {color: #212122;}
+
+.rui-bg-white {background-color: #FFFFFF;}
+.rui-bg-red {background-color: #C9302C;}
+.rui-bg-orange {background-color: #FFFFFF;}
+.rui-bg-yellow {background-color: #E5B51C;}
+.rui-bg-green {background-color: #449D44;}
+.rui-bg-cyan {background-color: #007D3D;}
+.rui-bg-blue {background-color: #337AB7;}
+.rui-bg-skyblue {background-color: #31B0D5;}
+.rui-bg-gray {background-color: #E6E6E6;}
+.rui-bg-black {background-color: #212122;}
 
 
 /* 颜色 -- End */
@@ -72,7 +83,7 @@ html, body {width: 100%;margin-top: 0px; margin-left: 0px;font-family:"Microsoft
 
 /* 手风琴 */
 
-details {cursor: pointer; background: rgba(240, 240, 240, 0.1); border-radius: 2px 2px 2px 2px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dddddd;}
+details {cursor: pointer; background: rgba(240, 240, 240, 0.1); border-radius: 2px 2px 2px 2px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #DDDDDD;}
 details > summary {padding: 0px 15px 0 20px; background: rgba(240, 240, 240, 0.8); outline: none;height: 40px; line-height: 40px;}
 details > section {padding: 10px 10px 10px 10px;}
 /*summary::-webkit-details-marker{display: none;} 这是屏蔽图标的(图标模块还么做暂时保留)*/
@@ -85,3 +96,28 @@ details > section {padding: 10px 10px 10px 10px;}
 
 
 /* 图标 -- End */
+
+
+/* 按钮 -- Start */
+
+button {padding:7px 12px;font-size:14px;color: #FFFFFF; background-color: #337AB7;border:none;border-radius:0;cursor: pointer;outline: none;-webkit-transition:border .25s linear,color .25s linear,background-color .25s linear;transition:border .25s linear,color .25s linear,background-color .25s linear;}
+button:hover, button:focus {background-color:#286090;}
+input[type="button"], input[type="submit"] {padding:7px 12px;font-size:14px;border:none;border-radius:0;cursor: pointer;outline: none;-webkit-transition:border .25s linear,color .25s linear,background-color .25s linear;transition:border .25s linear,color .25s linear,background-color .25s linear;}
+.rui-btn-sm {padding:5px 12px; font-size: 13px;}
+.rui-btn-lg {padding:12px 13px; font-size: 15px;}
+.rui-btn-blue {color: #FFFFFF; background-color: #337AB7;}
+.rui-btn-blue:hover, .rui-btn-blue:focus {background-color: #286090;}
+.rui-btn-white {color: #212122; background-color: #FFFFFF;}
+.rui-btn-white:hover, .rui-btn-white:focus {background-color: #E6E6E6;}
+.rui-btn-red {color: #FFFFFF; background-color: #D9534F;}
+.rui-btn-red:hover, .rui-btn-red:focus {background-color: #C9302C;}
+.rui-btn-yellow {color: #FFFFFF; background-color: #E5B51C;}
+.rui-btn-yellow:hover, .rui-btn-yellow:focus {background-color: #EC971F;}
+.rui-btn-green {color: #FFFFFF; background-color: #5CB85C;}
+.rui-btn-green:hover, .rui-btn-green:focus {background-color: #449D44;}
+.rui-btn-skyblue {color: #FFFFFF; background-color: #5BC0DE;}
+.rui-btn-skyblue:hover, .rui-btn-skyblue:focus {background-color: #31B0D5;}
+.rui-btn-black {color: #FFFFFF; background-color: #414142;}
+.rui-btn-black:hover, .rui-btn-black:focus {background-color: #212122;}
+
+/* 按钮 -- End */

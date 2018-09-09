@@ -56,15 +56,15 @@
 * 颜色 (正在寻找适合的颜色......)
     * 默认颜色
         * 白 `#FFFFFF`
-        * 红 ``
-        * 橙 ``
-        * 黄 ``
-        * 绿 ``
-        * 青 ``
-        * 蓝 ``
-        * 紫 ``
-        * 灰 ``
-        * 黑 ``
+        * 红 `#C9302C`
+        * 橙 ` `
+        * 黄 `#E5B51C`
+        * 绿 `#449D44`
+        * 藏青 `#007D3D`
+        * 蓝 `#337AB7`
+        * 天蓝 `#31B0D5`
+        * 灰 `#E6E6E6`
+        * 黑 `#212122`
     
     * 默认颜色/背景类
         * 白 `class="rui-color-white"` `class="rui-bg-white"`
@@ -72,9 +72,9 @@
         * 橙 `class="rui-color-orange"` `class="rui-bg-orange"`
         * 黄 `class="rui-color-yellow"` `class="rui-bg-yellow"`
         * 绿 `class="rui-color-green"` `class="rui-bg-green"`
-        * 青 `class="rui-color-cyan"` `class="rui-bg-cyan"`
+        * 藏青 `class="rui-color-cyan"` `class="rui-bg-cyan"`
         * 蓝 `class="rui-color-blue"` `class="rui-bg-blue"`
-        * 紫 `class="rui-color-purple"` `class="rui-bg-purple"`
+        * 天蓝 `class="rui-color-skyblue"` `class="rui-bg-skyblue"`
         * 灰 `class="rui-color-gray"` `class="rui-bg-gray"`
         * 黑 `class="rui-color-black"` `class="rui-bg-black"`
 
@@ -110,3 +110,49 @@
 
 * 图标
     * emmm 决定最后做了
+
+* 按钮
+    * 快速使用
+
+            <button>正常按钮</button>
+            <input class="rui-btn-blue" type="button" value="input按钮">
+            <input class="rui-btn-blue" type="submit" value="submit按钮">
+
+    * 使用方法
+
+        不需要 `class` 只用最原始标签即可使用按钮
+
+        * 按钮大小
+
+            默认按钮为正常大小
+
+            `class="rui-btn-sm"` 为小型按钮 示例: `<button class="rui-btn-sm">小型按钮</button>`
+            `class="rui-btn-lg"` 为大型按钮 示例: `<button class="rui-btn-lg">大型按钮</button>`
+
+        * 按钮颜色
+
+            按钮默认为蓝色
+
+            input和submit按钮默认无颜色 请添加颜色 例如蓝色 `class="rui-btn-blue"` 示例: `<input class="rui-btn-blue" type="button" value="input按钮">`
+
+            蓝色 `class="rui-btn-blue"`
+
+            白色 `class="rui-btn-white"`
+
+            红色 `class="rui-btn-red"`
+
+            黄色 `class="rui-btn-yellow"`
+
+            绿色 `class="rui-btn-green"`
+
+            黑色 `class="rui-btn-black"`
+
+            天蓝 `class="rui-btn-skyblue"`
+
+            示例: `<button class="rui-btn-green">绿色按钮</button>`
+
+        * 组合使用
+
+            绿色大按钮: `<button class="rui-btn-green rui-btn-lg">绿色大按钮</button>`
+
+            黑色大按钮: `<button class="rui-btn-black rui-btn-sm">黑色小按钮</button>`
