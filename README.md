@@ -155,4 +155,4 @@
 
             绿色大按钮: `<button class="rui-btn-green rui-btn-lg">绿色大按钮</button>`
 
-            黑色大按钮: `<button class="rui-btn-black rui-btn-sm">黑色小按钮</button>`
+            黑色小按钮: `<button class="rui-btn-black rui-btn-sm">黑色小按钮</button>`
