@@ -20,7 +20,7 @@
         <!DOCTYPE html>
         <html lang="CN">
             <head>
-                <meta charset="utf-8">
+                <meta charset="UTF-8">
                 <title>RequisiteUI</title>
                 <meta name="viewport" content="width=device-width">
                 <link rel="stylesheet" href="RequisiteUI/css/RequisiteUI.css">
@@ -29,7 +29,7 @@
 
             </body>
             <script src="RequisiteUI/common/jquery-3.3.1.min.js"></script>
-            <script src="RequisiteUI/js/Requisite.js"></script>
+            <script src="RequisiteUI/js/RequisiteUI.js"></script>
         </html>
 
 * 响应式布局
@@ -63,7 +63,7 @@
         * 藏青 `#007D3D`
         * 蓝 `#337AB7`
         * 天蓝 `#31B0D5`
-        * 灰 `#E6E6E6`
+        * 灰 `#9D9D9D`
         * 黑 `#212122`
     
     * 默认颜色/背景类
@@ -172,3 +172,82 @@
             由于 `<a>` 标签不支持 `disabled` 属性 但是可以使用按钮禁用样式 `class="rui-btn-disabled"` 但无法禁用 `tab` 选定 使用键盘仍可触发 `href`
 
             示例: `<a class="rui-btn rui-btn-disabled" href="#">禁用a按钮</a>`
+
+
+* 导航 (目前还未支持响应式)
+    * 快速使用
+
+            <nav>
+                <a href="#" action>Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#" menu>Menu</a>
+                <div>
+                    <a href="#">Join</a>
+                    <a href="#">Study</a>
+                </div>
+                <a href="#" right>Login</a>
+                <a href="#">Register</a>
+            </nav>
+
+    * 水平导航
+        * 使用方法
+
+            在 `<nav>` 里面放 `<a>` 标签就是一个导航
+
+            示例: 
+
+                    <nav>
+                        <a href="#">选项一</a>
+                        <a href="#">选项二</a>
+                    </nav>
+
+            你没有看错 就是这么简单
+
+        * 右侧选项
+
+            如果你想让你的选项在右侧 只需要一个 `right` 属性
+
+            你想从哪个选项开始是在右侧的 就在哪个 `<a>` 标签加入属性 `right` 示例: `<a href="#" right>右侧选项</a>`
+
+            在你加入 `right` 的 `<a>` 标签以及它下面的 `<a>` 标签就是全部出现在右侧
+
+            ※ 每个导航只能出现一个 `right` 属性
+
+            ※ 每个导航只能出现一个 `right` 属性
+
+            ※ 每个导航只能出现一个 `right` 属性
+
+            重要的事情说三遍
+
+            示例:
+
+                    <nav>
+                        <a href="#">选项一</a>
+                        <a href="#">选项二</a>
+                        <a href="#" right>选项三</a>
+                        <a href="#">选项四</a>
+                    </nav>
+
+            上面示例中 `选项三` 和 `选项四` 就会出现在右侧
+
+        * 下拉菜单
+
+            如果你想让你的选项拥有下拉菜单 只需要一个 `menu` 属性
+
+            在你需要下拉菜单的 `<a>` 标签里面加上 `menu` 属性 示例: `<a href="#" menu>下拉菜单</a>`
+
+            并且紧接着你具有 `menu` 属性的 `<a>` 标签后面写下你的下拉菜单项
+
+            你猜的没错 在 `<div>` 里面放 `<a>` 标签就是一个下拉菜单项 (这次是 `<div>` 不是 `<nav>`)
+
+            就是这么简单
+
+            示例: 
+
+                    <a href="#" menu>下拉菜单</a>
+                    <div>
+                        <a href="#">子菜单一</a>
+                        <a href="#">子菜单二</a>
+                    </div>
+

@@ -61,7 +61,7 @@ html, body {width: 100%;margin-top: 0px; margin-left: 0px;font-family:"Microsoft
 .rui-color-cyan {color: #007D3D;}
 .rui-color-blue {color: #337AB7;}
 .rui-color-skyblue {color: #31B0D5;}
-.rui-color-gray {color: #E6E6E6;}
+.rui-color-gray {color: #9D9D9D;}
 .rui-color-black {color: #212122;}
 
 .rui-bg-white {background-color: #FFFFFF;}
@@ -72,7 +72,7 @@ html, body {width: 100%;margin-top: 0px; margin-left: 0px;font-family:"Microsoft
 .rui-bg-cyan {background-color: #007D3D;}
 .rui-bg-blue {background-color: #337AB7;}
 .rui-bg-skyblue {background-color: #31B0D5;}
-.rui-bg-gray {background-color: #E6E6E6;}
+.rui-bg-gray {background-color: #9D9D9D;}
 .rui-bg-black {background-color: #212122;}
 
 
@@ -89,13 +89,6 @@ details > section {padding: 10px 10px 10px 10px;}
 /*summary::-webkit-details-marker{display: none;} 这是屏蔽图标的(图标模块还么做暂时保留)*/
 
 /* 内容面板 -- End */
-
-
-/* 图标 -- Start */
-
-
-
-/* 图标 -- End */
 
 
 /* 按钮 -- Start */
@@ -123,4 +116,16 @@ input[type="button"]:disabled, input[type="submit"]:disabled {opacity: .65; poin
 .rui-btn-black:hover, .rui-btn-black:focus {background-color: #212122;}
 
 /* 按钮 -- End */
+
+
+/* 导航 -- Start */
+
+nav, nav>div {background-color: #414142; display: flex; font-size: 18px; align-items: center; padding: 0 15px;font-family: 'Oswald', sans-serif;}
+nav>a, nav>div>a {color: #9D9D9D; text-decoration: none; padding: 15px;transition:border .25s linear,color .25s linear,background-color .25s linear;}
+nav>a:focus, nav>a:hover, nav>div>a:focus, nav>div>a:hover, .rui-nav-action {background-color: #212121;color: #FFFFFF;}
+nav>div {flex-direction: column; position: absolute;display: none;}
+nav>div>a {width: 100%;}
+.rui-nav-right {margin-left: auto;}
+
+/* 导航 -- End */
 
