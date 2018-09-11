@@ -102,7 +102,9 @@ details > section {padding: 10px 10px 10px 10px;}
 
 .rui-btn, button {padding:7px 12px;font-size:14px;color: #FFFFFF; background-color: #337AB7;border:none;border-radius:0;cursor: pointer;outline: none;text-decoration: none; -webkit-transition:border .25s linear,color .25s linear,background-color .25s linear;transition:border .25s linear,color .25s linear,background-color .25s linear;}
 .rui-btn:hover, .rui-btn:focus, button:hover, button:focus {background-color:#286090;}
+.rui-btn:disabled, button:disabled, .rui-btn-disabled {opacity: .65; pointer-events: none; cursor: not-allowed;}
 input[type="button"], input[type="submit"] {padding:7px 12px;font-size:14px;border:none;border-radius:0;cursor: pointer;outline: none;-webkit-transition:border .25s linear,color .25s linear,background-color .25s linear;transition:border .25s linear,color .25s linear,background-color .25s linear;}
+input[type="button"]:disabled, input[type="submit"]:disabled {opacity: .65; pointer-events: none; cursor: not-allowed;}
 .rui-btn-sm {padding:5px 12px; font-size: 13px;}
 .rui-btn-lg {padding:12px 13px; font-size: 15px;}
 .rui-btn-blue {color: #FFFFFF; background-color: #337AB7;}
@@ -121,3 +123,4 @@ input[type="button"], input[type="submit"] {padding:7px 12px;font-size:14px;bord
 .rui-btn-black:hover, .rui-btn-black:focus {background-color: #212122;}
 
 /* 按钮 -- End */
+

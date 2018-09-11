@@ -117,27 +117,31 @@
             <button>正常按钮</button>
             <input class="rui-btn-blue" type="button" value="input按钮">
             <input class="rui-btn-blue" type="submit" value="submit按钮">
+            <a class="rui-btn" href="#">a标签按钮</a>
 
     * 使用方法
 
-        不需要 `class` 只用最原始标签即可使用按钮
+        * 使用按钮
 
-        `<a>` 标签按钮 需要加 `class="rui-btn"` 示例: `<a class="rui-btn" href="#">按钮</a>`
+            直接使用 `<button>` 标签即可 示例: `<button>按钮</button>`
+
+            `<input>` 标签按钮 默认无颜色 需要添加按钮颜色类(具体颜色见下文按钮颜色)
+            
+            示例: `<input class="rui-btn-blue" type="button" value="按钮">`
+
+            `<a>` 标签按钮 需要添加 `class="rui-btn"` 示例: `<a class="rui-btn" href="#">按钮</a>`
 
         * 按钮大小
 
             默认按钮为正常大小
 
             `class="rui-btn-sm"` 为小型按钮 示例: `<button class="rui-btn-sm">小型按钮</button>`
+
             `class="rui-btn-lg"` 为大型按钮 示例: `<button class="rui-btn-lg">大型按钮</button>`
 
         * 按钮颜色
 
-            按钮默认为蓝色
-
-            input和submit按钮默认无颜色 请添加颜色 例如蓝色 `class="rui-btn-blue"` 示例: `<input class="rui-btn-blue" type="button" value="input按钮">`
-
-            蓝色 `class="rui-btn-blue"`
+            蓝色 `class="rui-btn-blue"` (`<button>` 标签默认颜色)
 
             白色 `class="rui-btn-white"`
 
@@ -158,3 +162,13 @@
             绿色大按钮: `<button class="rui-btn-green rui-btn-lg">绿色大按钮</button>`
 
             黑色小按钮: `<button class="rui-btn-black rui-btn-sm">黑色小按钮</button>`
+
+        * 禁用按钮
+
+            `<button>` 和 `<input>` 按钮直接添加 `disabled` 属性即可
+
+            示例: `<button disabled>禁用按钮</button>`
+
+            由于 `<a>` 标签不支持 `disabled` 属性 但是可以使用按钮禁用样式 `class="rui-btn-disabled"` 但无法禁用 `tab` 选定 使用键盘仍可触发 `href`
+
+            示例: `<a class="rui-btn rui-btn-disabled" href="#">禁用a按钮</a>`
