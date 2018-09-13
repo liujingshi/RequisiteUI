@@ -24,67 +24,69 @@ if (RequisiteUI_state == "Error") {
 /* 导航 -- Start */
 
 if ($("nav").exist()) {
-    if ($("nav").attr("column") != undefined) {
-        $("nav").addClass("rui-nav-column");
-        $(".rui-nav-column>a").each(function () {
-            if ($(this).attr("menu") != undefined) {
-                $(this).html('·&nbsp;' + $(this).html());
-            }
-            if ($(this).attr("menu") != undefined && $(this).attr("action") != undefined) {
-                $(this).next().css("display", "flex");
-            }
-        });
-        $(".rui-nav-column>a").bind("click", function () {
-            if ($(this).attr("menu") != undefined) {
-                if ($(this).next().css("display") == "none") {
-                    $(this).next().css("display", "flex");
-                } else {
-                    $(this).next().toggle();
+    $("nav").each(function() {
+        if ($(this).attr("column") != undefined) { // 垂直导航
+            $(this).addClass("rui-nav-column");
+            $(".rui-nav-column>a").each(function () {
+                if ($(this).attr("menu") != undefined) {
+                    $(this).html('·&nbsp;' + $(this).html());
                 }
-            }
-        });
-    } else {
-        $("nav>a").each(function () {
-            if ($(this).attr("action") != undefined) {
-                $(this).addClass("rui-nav-action");
-            }
-            if ($(this).attr("right") != undefined) {
-                $(this).addClass("rui-nav-right");
-            }
-            if ($(this).attr("menu") != undefined) {
-                $(this).html('·&nbsp;' + $(this).html());
-            }
-        });
-        $("nav>a").bind("click", function () {
-            $(this).attr("action", "");
-            $(this).addClass("rui-nav-action");
-            $that = $(this);
-            $(this).parent().find("a").each(function () {
-                if (!$(this).is($that)) {
-                    $(this).removeClass("rui-nav-action");
-                    $(this).removeAttr("action");
+                if ($(this).attr("menu") != undefined && $(this).attr("action") != undefined) {
+                    $(this).next().css("display", "flex");
                 }
             });
-        });
-        $("nav>a").hover(function () {
-            if ($(this).attr("menu") != undefined) {
-                $(this).next().css("top", $(this).parent().height() + $(this).position().top);
-                $(this).next().css("left", $(this).position().left);
-                $(this).next().css("display", "flex");
-            }
-        }, function () {
-            if ($(this).attr("menu") != undefined) {
-                if (!$(this).next().is(":hover")) {
-                    $(this).next().hide();
+            $(".rui-nav-column>a").bind("click", function () {
+                if ($(this).attr("menu") != undefined) {
+                    if ($(this).next().css("display") == "none") {
+                        $(this).next().css("display", "flex");
+                    } else {
+                        $(this).next().toggle();
+                    }
                 }
-            }
-        });
-        $("nav>div").hover(function () {
-            $(this).show();
-        }, function () {
-            $(this).hide();
-        });
-    }
+            });
+        } else { // 默认水平导航
+            $(this).find("a").each(function () {
+                if ($(this).attr("action") != undefined) {
+                    $(this).addClass("rui-nav-action");
+                }
+                if ($(this).attr("right") != undefined) {
+                    $(this).addClass("rui-nav-right");
+                }
+                if ($(this).attr("menu") != undefined) {
+                    $(this).html('·&nbsp;' + $(this).html());
+                }
+            });
+            $(this).find("a").bind("click", function () {
+                $(this).attr("action", "");
+                $(this).addClass("rui-nav-action");
+                $that = $(this);
+                $(this).parent().find("a").each(function () {
+                    if (!$(this).is($that)) {
+                        $(this).removeClass("rui-nav-action");
+                        $(this).removeAttr("action");
+                    }
+                });
+            });
+            $(this).find("a").hover(function () {
+                if ($(this).attr("menu") != undefined) {
+                    $(this).next().css("top", $(this).parent().height() + $(this).position().top);
+                    $(this).next().css("left", $(this).position().left);
+                    $(this).next().css("display", "flex");
+                }
+            }, function () {
+                if ($(this).attr("menu") != undefined) {
+                    if (!$(this).next().is(":hover")) {
+                        $(this).next().hide();
+                    }
+                }
+            });
+            $(this).find("div").hover(function () {
+                $(this).show();
+            }, function () {
+                $(this).hide();
+            });
+        }
+    });
 }
 
 /* 导航 -- End */

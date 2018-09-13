@@ -125,8 +125,9 @@ nav>a, nav>div>a {color: #9D9D9D; text-decoration: none; padding: 15px;-webkit-t
 nav>a:hover, nav>div>a:hover, .rui-nav-action {background-color: #212121;color: #FFFFFF;}
 nav>div {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; position: absolute;display: none;}
 nav>div>a {width: 100%;}
+nav>h1 {color: #5CB85C; width: 200px; font-size: 18px; text-align: center;}
 .rui-nav-right {margin-left: auto;}
-.rui-nav-column {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; max-width: 200px;font-size: 16px;}
+.rui-nav-column {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; max-width: 185px;font-size: 16px;}
 .rui-nav-column>a {width: 100%;}
 .rui-nav-column>div {position: static; background-color: #2C2C2C; width: 100%;font-size: 16px;}
 
