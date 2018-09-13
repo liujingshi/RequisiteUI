@@ -175,22 +175,22 @@
 
 
 * 导航 (目前还未支持响应式)
-    * 快速使用
-
-            <nav>
-                <a href="#" action>Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#" menu>Menu</a>
-                <div>
-                    <a href="#">Join</a>
-                    <a href="#">Study</a>
-                </div>
-                <a href="#" right>Login</a>
-                <a href="#">Register</a>
-            </nav>
-
     * 水平导航
+        * 快速使用
+
+                <nav>
+                    <a href="#" action>Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#" menu>Menu</a>
+                    <div>
+                        <a href="#">Join</a>
+                        <a href="#">Study</a>
+                    </div>
+                    <a href="#" right>Login</a>
+                    <a href="#">Register</a>
+                </nav>
+
         * 使用方法
 
             在 `<nav>` 里面放 `<a>` 标签就是一个导航
@@ -251,3 +251,39 @@
                         <a href="#">子菜单二</a>
                     </div>
 
+    
+    * 垂直导航
+        * 快速使用
+
+                <nav column>
+                    <a href="#" menu action>默认打开下拉菜单项</a>
+                    <div>
+                        <a href="#">选项一</a>
+                        <a href="#">选项二</a>
+                    </div>
+                    <a href="#" menu>默认关闭下拉菜单项</a>
+                    <div>
+                        <a href="#">选项一</a>
+                        <a href="#">选项二</a>
+                    </div>
+                    <a href="#">链接一</a>
+                    <a href="#">链接二</a>
+                </nav>
+
+        * 使用方法
+
+            在 `<nav>` 标签里添加属性 `column` 示例: `<nav column>`
+
+            依旧是这么简单
+
+        * 下拉菜单
+
+            `垂直导航` 的下拉菜单和 `水平导航` 的使用方法一样
+
+            默认的菜单项是关闭的
+
+            如果你想让你的菜单项默认是打开的 就在想要默认开启的 `<a>` 标签中加上 `action` 属性
+
+            示例: `<a href="#" menu action>默认打开下拉菜单项</a>`
+
+        

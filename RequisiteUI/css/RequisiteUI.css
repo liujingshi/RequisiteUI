@@ -120,12 +120,15 @@ input[type="button"]:disabled, input[type="submit"]:disabled {opacity: .65; poin
 
 /* 导航 -- Start */
 
-nav, nav>div {background-color: #414142; display: flex; font-size: 18px; align-items: center; padding: 0 15px;font-family: 'Oswald', sans-serif;}
-nav>a, nav>div>a {color: #9D9D9D; text-decoration: none; padding: 15px;transition:border .25s linear,color .25s linear,background-color .25s linear;}
-nav>a:focus, nav>a:hover, nav>div>a:focus, nav>div>a:hover, .rui-nav-action {background-color: #212121;color: #FFFFFF;}
-nav>div {flex-direction: column; position: absolute;display: none;}
+nav, nav>div {background-color: #414142; display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 18px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 0 15px;font-family: 'Oswald', sans-serif;}
+nav>a, nav>div>a {color: #9D9D9D; text-decoration: none; padding: 15px;-webkit-transition:border .25s linear,color .25s linear,background-color .25s linear;transition:border .25s linear,color .25s linear,background-color .25s linear;}
+nav>a:hover, nav>div>a:hover, .rui-nav-action {background-color: #212121;color: #FFFFFF;}
+nav>div {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; position: absolute;display: none;}
 nav>div>a {width: 100%;}
 .rui-nav-right {margin-left: auto;}
+.rui-nav-column {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column; max-width: 200px;font-size: 16px;}
+.rui-nav-column>a {width: 100%;}
+.rui-nav-column>div {position: static; background-color: #2C2C2C; width: 100%;font-size: 16px;}
 
 /* 导航 -- End */
 
