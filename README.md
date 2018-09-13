@@ -297,4 +297,73 @@
 
             示例: `<a href="#" menu action>默认打开下拉菜单项</a>`
 
-        
+* 表单
+
+    * 先说一下 单选框和复选框 刘叔弄了四个小时 已经要爆炸 emmm 好吧 刘叔承认 这是第一次写单选框和复选框的样式
+
+    * 快速使用
+
+            <form action="">
+                <h1>用户名</h1>
+                <input type="text" name="username" placeholder="请输入用户名">
+                <h1>密码</h1>
+                <input type="password" name="password" placeholder="请输入密码">
+                <h1>年级</h1>
+                <div>
+                    <input type="radio" name="grade" value="D1" title="大一">
+                    <input type="radio" name="grade" value="D2" title="大二">
+                    <input type="radio" name="grade" value="D3" title="大三">
+                    <input type="radio" name="grade" value="D4" title="大四">
+                </div>
+                <h1>爱好</h1>
+                <div>
+                    <input type="checkbox" name="hobby" value="A1" title="篮球">
+                    <input type="checkbox" name="hobby" value="A2" title="足球">
+                    <input type="checkbox" name="hobby" value="A3" title="滑板">
+                    <input type="checkbox" name="hobby" value="A4" title="唱歌">
+                </div>
+                <input type="submit" class="rui-btn-blue" value="提交">
+            </form>
+
+    * 使用方法
+        * 基本操作
+
+            `<form>` 标签里面放置 `<input>` 就是表单 emmm 好像表单都是这样的
+
+            看看上面快速使用 意会一下
+
+            如果你不想使用 `<form>` 标签 也可以使用其他元素 添加 `class="rui-form"` 即可
+
+            例如 `<div>` 标签 `<div class="rui-form"></div>`
+
+            当然你也可以单独使用 `<input>` 标签
+
+            表单内容默认是垂直排列 如果你想水平排列 只需使用一个 `<div>` 将你想要水平排列的元素放进去即可 就像快速使用中的单选框和复选框一样
+
+        * 输入框
+
+            `<input type="text">` 输入框默认 `width: 100%` emmm 没什么好说的
+
+        * 单选框
+
+            `<input type="radio" title="单选框">`
+            
+            `title` 属性值就是选项的文字部分了
+            
+            emmm 简单说一下吧(小白看看 大神请绕行)
+
+            同一组单选框 `name` 属性值要相同 参考上面的快速使用
+
+            `value` 的属性值是提交给后台的数据 正常同一组的 `value` 值是不一样的 因为要区分用户选择了哪个
+
+        * 复选框
+
+            `<input type="checkbox" title="复选框">`
+
+            同样 `title` 是选项文字
+
+            当然 同一组复选框的 `name` 要相同 `value` 也是提交给后台的数据 其值一般也是不一样的
+
+        * 提交按钮 ? ? ?
+
+            这个好像属于按钮部分
