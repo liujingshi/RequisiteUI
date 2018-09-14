@@ -2,6 +2,9 @@
  * @name: RequisiteUI
  * @author: 刘叔
  * @host: requisiteui.com
+ * 
+ * @content: 函数库
+ * 
  */
 
 

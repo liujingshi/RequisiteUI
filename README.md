@@ -7,6 +7,7 @@
         * `刘叔` 一个神奇的人类 框架的开发者
         * 官方网站 `requisiteui.com`
         * 本页内容不定期更新
+        * 脚本使用了jQuery
 
 * `RequisiteUI` 一款响应式框架
 
@@ -29,7 +30,6 @@
             <body>
 
             </body>
-            <script src="RequisiteUI/common/jquery-3.3.1.min.js"></script>
             <script src="RequisiteUI/js/RequisiteUI.js"></script>
         </html>
 
