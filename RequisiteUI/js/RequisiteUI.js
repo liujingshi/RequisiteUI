@@ -8,16 +8,30 @@
  */
 
 var jsList = [
-    'RequisiteUI/common/jquery.js', // jQuery
-    'RequisiteUI/js/models/functions.js', // 函数库
-    'RequisiteUI/js/models/start.js' // 框架入主体
+    'common/jquery.js', // jQuery
+    'js/models/functions.js', // 函数库
+    'js/models/start.js' // 框架主体
 ]
 
 var header = "<script src='";
 var footer = "'></script>";
 var html_str = "";
 
-for (jsFile in jsList) {
+// 获取框架所在路径
+
+var scripts = document.getElementsByTagName("script");
+for (var script in scripts) {
+    var src = scripts[script].attributes["src"].value;
+    if (src.indexOf("js/RequisiteUI.js") >= 0) {
+        var dirs = src.split("js/RequisiteUI.js");
+        header += dirs[0];
+        break;
+    }
+}
+
+// 加载框架
+
+for (var jsFile in jsList) {
     html_str += header + jsList[jsFile] + footer;
 }
 
