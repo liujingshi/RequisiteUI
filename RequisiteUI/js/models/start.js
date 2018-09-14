@@ -87,10 +87,13 @@ if ($("input[type='checkbox']").exist()) {
         if ($(this).attr("checked") != undefined) {
             state = state + "-checked";
         }
+        if ($(this).attr("disabled") != undefined) {
+            state = state + "-disabled";
+        }
         $(this).wrap("<label class='" + state + "' checkbox>" + $(this).attr("title") + "</label>");
     }); // End checkbox each
     $("label").bind("click", function (e) {
-        if ($(this).attr("checkbox") != undefined && $(e.target).is("label")) {
+        if ($(this).attr("checkbox") != undefined && $(e.target).is("label") && $(this).find("input").attr("disabled") == undefined) {
             if ($(this).hasClass("rui-checkbox-label")) {
                 $(this).addClass("rui-checkbox-label-checked");
                 $(this).removeClass("rui-checkbox-label");
@@ -108,10 +111,13 @@ if ($("input[type='radio']").exist()) {
         if ($(this).attr("checked") != undefined) {
             state = state + "-checked";
         }
+        if ($(this).attr("disabled") != undefined) {
+            state = state + "-disabled";
+        }
         $(this).wrap("<label class='" + state + "' radio>" + $(this).attr("title") + "</label>");
     }); // End radio each
     $("label").bind("click", function (e) {
-        if ($(this).attr("radio") != undefined && $(e.target).is("label")) {
+        if ($(this).attr("radio") != undefined && $(e.target).is("label") && $(this).find("input").attr("disabled") == undefined) {
             $("input[name='" + $(this).find("input").attr("name") + "']").parent().each(function () {
                 $(this).removeClass("rui-radio-label-checked");
                 $(this).addClass("rui-radio-label");
