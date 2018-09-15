@@ -132,16 +132,21 @@ if ($("input[type='radio']").exist()) {
 
 if ($("select").exist()) {
     $("select").each(function () {
-        $select = $(this);
+        var $select = $(this);
         $(this).after("<div class='rui-select-div' tabindex='0'></div>");
         var $rui_select_div = $(this).next();
         $rui_select_div.append("<div class='rui-select-input-div'></div>");
         $rui_select_div.append("<div class='rui-select-option-div'></div>");
         var $rui_select_input_div = $rui_select_div.find("div").eq(0);
         var $rui_select_option_div = $rui_select_div.find("div").eq(1);
-        var input_placeholder = "<input class='rui-select' type='text' placeholder='";
-        var placeholder_value = "' value='";
+        var input_class = "rui-select";
         var value_endinput = "' readonly>";
+        if ($(this).attr("search") != undefined) {
+            value_endinput = "'>";
+            input_class += " rui-select-search";
+        }
+        var input_placeholder = "<input class='" + input_class + "' type='text' placeholder='";
+        var placeholder_value = "' value='";
         var placeholder = $(this).attr("placeholder");
         var value = "";
         var options = [];
@@ -157,45 +162,66 @@ if ($("select").exist()) {
         var select_html_str = input_placeholder + placeholder + placeholder_value + value + value_endinput;
         $rui_select_input_div.append(select_html_str);
         $rui_select_input_div.append("<div class='rui-select-down'></div>");
-        $rui_select_option_div.append("<dl></dl>");
-        var dd_start = "<dd data-value='";
-        var dd_value = "'>";
-        var dd_end = "</dd>";
-        var dd_selected_start = "<dd class='rui-select-selected' style='color:#FFFFFF;' data-value='";
-        var $dl = $rui_select_option_div.find("dl").eq(0);
-        for (var option in options) {
-            if (options[option] == value) {
-                $dl.append(dd_selected_start + values[option] + dd_value + options[option] + dd_end);
-            } else {
-                $dl.append(dd_start + values[option] + dd_value + options[option] + dd_end);
-            }
-        } // End for option in options
         var $rui_select_icon = $rui_select_input_div.find("div").eq(0);
+        var $rui_select_input = $rui_select_input_div.find("input").eq(0);
+        var setOptions = function (now_options, now_values) {
+            $rui_select_option_div.append("<dl></dl>");
+            var dd_start = "<dd data-value='";
+            var dd_value = "'>";
+            var dd_end = "</dd>";
+            var dd_selected_start = "<dd class='rui-select-selected' style='color:#FFFFFF;' data-value='";
+            var $dl = $rui_select_option_div.find("dl").eq(0);
+            for (var option in now_options) {
+                if (now_options[option] == value) {
+                    $dl.append(dd_selected_start + now_values[option] + dd_value + now_options[option] + dd_end);
+                } else {
+                    $dl.append(dd_start + now_values[option] + dd_value + now_options[option] + dd_end);
+                }
+            } // End for option in options
+            $rui_select_option_div.find("dl").eq(0).find("dd").bind("click", function (e) {
+                $(this).parent().find("dd").each(function () {
+                    $(this).removeClass("rui-select-selected");
+                    $(this).css("color", "#555555");
+                });
+                $(this).addClass("rui-select-selected");
+                $(this).css("color", "#FFFFFF");
+                $rui_select_input.val($(this).html());
+                $select.val(e.target.dataset.value);
+                $rui_select_option_div.slideUp(200);
+                $rui_select_icon.removeClass("rui-select-icon-rotate");
+            }); // End rui-select-option-div find dl find dd bind click
+        } // End function setOptions
+        setOptions(options, values);
         $rui_select_input_div.bind("click", function () {
             if ($rui_select_option_div.css("display") == "none") {
-                $rui_select_option_div.slideToggle(200);
+                $rui_select_option_div.slideDown(200);
                 $rui_select_icon.addClass("rui-select-icon-rotate");
-                $rui_select_div.focus();
+            } else {
+                $rui_select_option_div.slideUp(200);
+                $rui_select_icon.removeClass("rui-select-icon-rotate");
             }
         }); // End rui-select-input-div bind click
-        $rui_select_option_div.find("dl").eq(0).find("dd").bind("click", function (e) {
-            $(this).parent().find("dd").each(function () {
-                $(this).removeClass("rui-select-selected");
-                $(this).css("color", "#555555");
-            });
-            $(this).addClass("rui-select-selected");
-            $(this).css("color", "#FFFFFF");
-            $rui_select_input_div.find("input").eq(0).val($(this).html());
-            $select.val(e.target.dataset.value);
-            $rui_select_option_div.slideToggle(200);
-            $rui_select_icon.removeClass("rui-select-icon-rotate");
-        }); // End rui-select-option-div find dl find dd bind click
-        $rui_select_div.blur(function () {
-            if ($rui_select_option_div.css("display") != "none") {
-                $rui_select_option_div.slideToggle(200);
+        $rui_select_input.blur(function () {
+            if (!$rui_select_option_div.is(":hover")) {
+                $rui_select_option_div.slideUp(200);
                 $rui_select_icon.removeClass("rui-select-icon-rotate");
             }
         }); // End rui-select-div blur
+        if ($(this).attr("search") != undefined) {
+            $rui_select_input.bind("input propertychange", function () {
+                var text = $rui_select_input.val();
+                var new_options = [];
+                var new_values = [];
+                for (var option in options) {
+                    if (options[option].indexOf(text) != -1) {
+                        new_options.push(options[option]);
+                        new_values.push(values[option]);
+                    }
+                }
+                $rui_select_option_div.find("dl").eq(0).remove();
+                setOptions(new_options, new_values);
+            }); // End rui_select_input bind input
+        } // End if search
     }); // End select each
 } // End id select exist
 
