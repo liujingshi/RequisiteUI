@@ -12,26 +12,24 @@
     <main>
 
         <form action="" style="width:600px; margin: 20px auto 0;">
-            <h1>用户名</h1>
-            <input type="text" name="username" placeholder="请输入用户名">
-            <h1>密码</h1>
-            <input type="password" name="password" placeholder="请输入密码">
-            <h1>年级</h1>
-            <div>
-                <input type="radio" name="grade" value="D1" title="大一">
-                <input type="radio" name="grade" value="D2" title="大二" checked>
-                <input type="radio" name="grade1" value="D3" title="大三" checked disabled>
-                <input type="radio" name="grade2" value="D4" title="大四" disabled>
-            </div>
-            <h1>爱好</h1>
-            <div>
-                <input type="checkbox" name="hobby" value="A1" title="篮球">
-                <input type="checkbox" name="hobby" value="A2" title="足球" checked>
-                <input type="checkbox" name="hobby" value="A3" title="滑板" checked disabled>
-                <input type="checkbox" name="hobby" value="A4" title="唱歌" disabled>
-            </div>
-            <input type="submit" class="rui-btn-blue" value="提交">
+            <select name="select1" placeholder="请选择1">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+            </select>
+            <select name="select2" placeholder="请选择2">
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+            </select>
+            <input type="submit" class="rui-btn-green" value="提交">
         </form>
+
     </main>
 </body>
 <script src="RequisiteUI/js/RequisiteUI.js"></script>

@@ -128,4 +128,77 @@ if ($("input[type='radio']").exist()) {
     }); // End label bind click
 } // End if radio exist
 
+/* 下拉选择框 -- Start */
+
+if ($("select").exist()) {
+    $("select").each(function () {
+        $select = $(this);
+        $(this).after("<div class='rui-select-div' tabindex='0'></div>");
+        var $rui_select_div = $(this).next();
+        $rui_select_div.append("<div class='rui-select-input-div'></div>");
+        $rui_select_div.append("<div class='rui-select-option-div'></div>");
+        var $rui_select_input_div = $rui_select_div.find("div").eq(0);
+        var $rui_select_option_div = $rui_select_div.find("div").eq(1);
+        var input_placeholder = "<input class='rui-select' type='text' placeholder='";
+        var placeholder_value = "' value='";
+        var value_endinput = "' readonly>";
+        var placeholder = $(this).attr("placeholder");
+        var value = "";
+        var options = [];
+        var values = [];
+        $(this).find("option").each(function () {
+            var option = $(this).html();
+            options.push(option);
+            values.push($(this).attr("value"));
+            if ($(this).attr("selected") != undefined) {
+                value = option;
+            }
+        }); // End this find option each
+        var select_html_str = input_placeholder + placeholder + placeholder_value + value + value_endinput;
+        $rui_select_input_div.append(select_html_str);
+        $rui_select_input_div.append("<div class='rui-select-down'></div>");
+        $rui_select_option_div.append("<dl></dl>");
+        var dd_start = "<dd data-value='";
+        var dd_value = "'>";
+        var dd_end = "</dd>";
+        var dd_selected_start = "<dd class='rui-select-selected' style='color:#FFFFFF;' data-value='";
+        var $dl = $rui_select_option_div.find("dl").eq(0);
+        for (var option in options) {
+            if (options[option] == value) {
+                $dl.append(dd_selected_start + values[option] + dd_value + options[option] + dd_end);
+            } else {
+                $dl.append(dd_start + values[option] + dd_value + options[option] + dd_end);
+            }
+        } // End for option in options
+        var $rui_select_icon = $rui_select_input_div.find("div").eq(0);
+        $rui_select_input_div.bind("click", function () {
+            if ($rui_select_option_div.css("display") == "none") {
+                $rui_select_option_div.slideToggle(200);
+                $rui_select_icon.addClass("rui-select-icon-rotate");
+                $rui_select_div.focus();
+            }
+        }); // End rui-select-input-div bind click
+        $rui_select_option_div.find("dl").eq(0).find("dd").bind("click", function (e) {
+            $(this).parent().find("dd").each(function () {
+                $(this).removeClass("rui-select-selected");
+                $(this).css("color", "#555555");
+            });
+            $(this).addClass("rui-select-selected");
+            $(this).css("color", "#FFFFFF");
+            $rui_select_input_div.find("input").eq(0).val($(this).html());
+            $select.val(e.target.dataset.value);
+            $rui_select_option_div.slideToggle(200);
+            $rui_select_icon.removeClass("rui-select-icon-rotate");
+        }); // End rui-select-option-div find dl find dd bind click
+        $rui_select_div.blur(function () {
+            if ($rui_select_option_div.css("display") != "none") {
+                $rui_select_option_div.slideToggle(200);
+                $rui_select_icon.removeClass("rui-select-icon-rotate");
+            }
+        }); // End rui-select-div blur
+    }); // End select each
+} // End id select exist
+
+/* 下拉选择框 -- End */
+
 /* 表单 -- End */

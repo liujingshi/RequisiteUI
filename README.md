@@ -332,6 +332,16 @@
 
             看看上面快速使用 意会一下
 
+            `<form>` 标签是什么? 是表单啊 表单是什么?
+
+            简单的说表单就是前端向后端提交数据的工具
+
+            `action` 属性就是提交给谁 示例: `<form action="demo.php"></form>`
+
+            `method` 属性就是提交数据的方式 默认 `GET`
+
+            当然 如果你有一定的前端基础肯定不会使用表单提交数据 后续将会在表单动态操作里面介绍
+
             如果你不想使用 `<form>` 标签 也可以使用其他元素 添加 `class="rui-form"` 即可
 
             例如 `<div>` 标签 `<div class="rui-form"></div>`
@@ -375,3 +385,38 @@
         * 提交按钮 ? ? ?
 
             这个好像属于按钮部分
+
+        * 下拉选择框
+
+                特殊说明: 这个下拉选择框刘叔做到了凌晨两点 第二天起来又做了一个小时 终于完成 并不是很完美 QAQ..
+
+            快速使用:
+
+                <select name="select" placeholder="请选择">
+                    <option value="A">A选项</option>
+                    <option value="B">B选项</option>
+                </select>
+
+            和基本的下拉选择框一样 使用的是 `<select>` 标签
+
+            简单说一下 `<select>` 标签的基本用法
+
+            `<select name='select'></select>` 这是一个基本的 `<select>` 标签
+
+            属性 `name` 就不用说了 就是提交给后台数据的名 表单的元素都是这样
+
+            在 `<select>` 标签内部要有 `<option>` 标签作为选项
+
+            再简单说一下 `<option>` 标签的基本用法
+
+            `<option value="A">A选项</option>` 这是一个基本的 `<option>` 标签
+
+            属性 `value` 是传递给后台的值 标签的文字内容是选项显示的文字
+
+            和 `<input type="text">` 一样  `RequisiteUI` 的 `<select>` 标签也支持 `placeholder` 属性
+
+            `<select placeholder="请选择"></select>` 这样在用户什么也不选的时候会出现默认的提示文字
+
+            如果你想让你的下拉选择框默认选择一项 就在默认项的 `<option>` 标签里面加上属性 `selected`
+
+            本 `<select>` 标签默认占据宽度 `100%` 如果你想改变宽度 就在外面包裹其他元素吧 改变外部元素的宽度即可
