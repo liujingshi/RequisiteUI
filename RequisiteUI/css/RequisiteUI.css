@@ -179,9 +179,6 @@ input[type="checkbox"], input[type="radio"], select {display: none;}
 .rui-select {padding-right: 30px;width: 100%;}
 .rui-select-down {width: 0;height: 0;border-radius: 0;border-left: 6px solid rgba(0, 0, 0, 0);border-right: 6px solid rgba(0, 0, 0, 0);border-top: 10px solid #C0C0C0;margin: 13px auto 0;position: relative;right: 22px;cursor: pointer;-webkit-transition: all .25s;transition: all .25s;}
 .rui-select-icon-rotate {-webkit-transform: rotate(180deg);transform: rotate(180deg);}
-
-.rui-select-search {
-    cursor: text;
-}
+.rui-select-search {cursor: text;}
 
 /* 表单 -- End */
