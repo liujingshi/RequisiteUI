@@ -121,7 +121,7 @@
         * 使用方法
 
             使用了三个 `<div>` 标签 其中用一个包裹另外两个
-            
+
             外面的 `<div>` 是面板, 里面的两个 `<div>` 分别为面板的头部与身体
 
             向面板的 `<div>` 中加入 `class="rui=panel"` 示例: `<div class="rui-panel"></div>`
@@ -136,15 +136,32 @@
 
             面板的默认宽度为 `100%`
 
+    * 块引用
+
+        `<blockquote>内容</blockquote>`
+
+        不解释 自己试一下比解释一大堆要来得快
+
+    * 字段集
+
+            <fieldset>
+                <legend>Title</legend>
+                <section>
+                    Content
+                </section>
+            </fieldset>
+
+        同样不解释
+
     * 面板颜色
 
         面板内置了五种颜色类(不包括默认颜色)
 
-        * 绿色 `class="rui-panel-green"`
-        * 蓝色 `class="rui-panel-blue"`
-        * 天蓝 `class="rui-panel-skyblue"`
-        * 黄色 `class="rui-panel-yellow"`
-        * 红色 `class="rui-panel-red"`
+        * 绿色 `class="rui-panel-green"` `class="rui-blockquote-green"`
+        * 蓝色 `class="rui-panel-blue"` 
+        * 天蓝 `class="rui-panel-skyblue"` `class="rui-blockquote-skyblue"`
+        * 黄色 `class="rui-panel-yellow"` `class="rui-blockquote-yellow"`
+        * 红色 `class="rui-panel-red"` `class="rui-blockquote-red"`
 
         示例:
 
@@ -161,6 +178,8 @@
                     手风琴内容
                 </section>
             </details>
+
+            <blockquote class="rui-blockquote-skyblue">天蓝风格块引用</blockquote>
 
 * 图标
     * emmm 决定最后做了
