@@ -21,3 +21,14 @@
         return false;
     };
 })(jQuery);
+
+/**
+ * jQuery函数 获取当前时间戳 精确到毫秒
+ * 使用方法: $.timestamp
+ * 返回值: bool
+ */
+(function ($) {
+    $.timestamp = function () {
+        return new Date().getTime();
+    };
+})(jQuery);

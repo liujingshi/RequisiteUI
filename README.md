@@ -556,3 +556,39 @@
 
 * 样式部分先告一段落 开始写一些模块
 
+* 弹出层
+    * 提示框 alert
+        * 快速使用
+
+                <script src="RequisiteUI/js/RequisiteUI.js"></script>
+                <script>
+                    rui.popup.alert("我是一个小小提示框", "大家好");
+                </script>
+
+        * 使用方法
+
+            一定要写在框架JS文件的下面 否则无效
+
+                rui.popup.alert("内容", "标题");
+
+            使用了 `rui.popup.alert()` 方法
+
+            方法第一个参数为提示框的内容(必须)
+
+            方法第二个参数为提示框的标题(非必须)
+
+            你可能会觉得方法名比较长
+
+            `rui.popup` 为弹出层的模块
+
+            你可以用一个你自己喜欢的变量替代它
+
+            就像这样
+
+                <script src="RequisiteUI/js/RequisiteUI.js"></script>
+                <script>
+                    var popup = rui.popup;
+                    popup.alert("我是一个小小提示框", "大家好");
+                </script>
+
+

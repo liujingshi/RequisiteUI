@@ -8,6 +8,9 @@
  */
 
 
+/* Style ------ Start */
+
+
 /* 导航 -- Start */
 
 if ($("nav").exist()) {
@@ -147,7 +150,7 @@ if ($("select").exist()) {
         }
         var input_placeholder = "<input class='" + input_class + "' type='text' placeholder='";
         var placeholder_value = "' value='";
-        var placeholder = $(this).attr("placeholder");
+        var placeholder = $(this).attr("placeholder") != undefined ? $(this).attr("placeholder") : "";
         var value = "";
         var options = [];
         var values = [];
@@ -228,3 +231,19 @@ if ($("select").exist()) {
 /* 下拉选择框 -- End */
 
 /* 表单 -- End */
+
+
+/* Style ------ End */
+
+
+/* Model ------ Start */
+
+var rui = {
+
+    /* 弹出层 */
+
+    popup: rui_popup
+
+};
+
+/* Model ------ End */

@@ -10,6 +10,7 @@
 var jsList = [
     'common/jquery.js', // jQuery
     'js/models/functions.js', // 函数库
+    'js/models/popup.js', // 弹出层模块
     'js/models/start.js' // 框架主体
 ]
 
