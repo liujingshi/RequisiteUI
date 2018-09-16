@@ -80,7 +80,7 @@
         * 黑 `class="rui-color-black"` `class="rui-bg-black"`
 
 * 内容面板
-    * 手风琴
+    * 折叠面板 - 手风琴
         * 快速使用
 
                 <details open>
@@ -98,7 +98,7 @@
 
         * 使用方法
 
-            手风琴其实就是个折叠面板 利用了HTML5中的标签 `<details>` `<summary>` 实现了手风琴的折叠和打开 标签 `<section>` 内放置手风琴的内容
+            折叠面板 手风琴 利用了HTML5中的标签 `<details>` `<summary>` 实现了手风琴的折叠和打开 标签 `<section>` 内放置手风琴的内容
 
             具体结构见上面快速使用
 
@@ -108,6 +108,57 @@
 
             图标部分还未制作 暂时使用自带的三角图标
 
+    * 卡片面板
+        * 快速使用
+
+                <div class="rui-panel">
+                    <div class="rui-panel-head">Title</div>
+                    <div class="rui-panel-body">
+                        Content
+                    </div>
+                </div>
+
+        * 使用方法
+
+            使用了三个 `<div>` 标签 其中用一个包裹另外两个 外面的 `<div>` 是面板 里面的两个 `<div>` 分别为面板的头部与身体
+
+            向面板的 `<div>` 中加入 `class="rui=panel"` 示例: `<div class="rui-panel"></div>`
+
+            向面板头部的 `<div>` 中加入 `class="rui-panel-head"` 示例: `<div class="rui-panel-head"></div>`
+
+            向面板身体的 `<div>` 中加入 `class="rui-panel-body"` 示例: `<div class="rui-panel-body"></div>`
+
+            这样 就形成了上面快速使用中的面板格式
+
+            卡面面板就制作成功了
+
+            面板的默认宽度为 `100%`
+
+    * 面板颜色
+
+        面板内置了五种颜色类(不包括默认颜色)
+
+        * 绿色 `class="rui-panel-green"`
+        * 蓝色 `class="rui-panel-blue"`
+        * 天蓝 `class="rui-panel-skyblue"`
+        * 黄色 `class="rui-panel-yellow"`
+        * 红色 `class="rui-panel-red"`
+
+        示例:
+
+            <div class="rui-panel rui-panel-green">
+                <div class="rui-panel-head">绿色卡片面板</div>
+                <div class="rui-panel-body">
+                    面板内容
+                </div>
+            </div>
+
+            <details class="rui-panel-yellow" open>
+                <summary>黄色折叠面板</summary>
+                <section>
+                    手风琴内容
+                </section>
+            </details>
 
 * 图标
     * emmm 决定最后做了

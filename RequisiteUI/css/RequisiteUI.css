@@ -81,12 +81,20 @@ html, body {width: 100%;margin: 0; font-family:"Microsoft YaHei",微软雅黑,"M
 
 /* 内容面板 -- Start */
 
-/* 手风琴 */
-
-details {cursor: pointer; background: rgba(240, 240, 240, 0.1); border-radius: 2px 2px 2px 2px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #DDDDDD;}
-details > summary {padding: 0px 15px 0 20px; background: rgba(240, 240, 240, 0.8); outline: none;height: 40px; line-height: 40px;}
-details > section {padding: 10px 10px 10px 10px;}
-/*summary::-webkit-details-marker{display: none;} 这是屏蔽图标的(图标模块还么做暂时保留)*/
+details>summary {cursor: pointer; outline: 0;}
+.rui-panel, details {border-radius: 0;border: 1px solid #DDDDDD;width: 100%;display: flex;flex-direction: column;box-shadow: 0 1px 1px rgba(0, 0, 0, .05);box-sizing: border-box;font-size: 14px;font-weight: 400;}
+.rui-panel>.rui-panel-head, details>summary {color: #333333;background-color: #F5F5F5;border-bottom: 1px solid #DDDDDD;padding: 10px 15px;}
+.rui-panel>.rui-panel-body, details>section {color: #666666;padding: 15px;}
+.rui-panel-green {border-color: #D6E9C6;}
+.rui-panel-green>.rui-panel-head, .rui-panel-green>summary {color: #3C763D; background-color: #DFF0D8;border-color: #D6E9C6;}
+.rui-panel-blue {border-color: #337AB7;}
+.rui-panel-blue>.rui-panel-head, .rui-panel-blue>summary {color: #FFFFFF; background-color: #337AB7;border-color: #337AB7;}
+.rui-panel-skyblue {border-color: #BCE8F1;}
+.rui-panel-skyblue>.rui-panel-head, .rui-panel-skyblue>summary {color: #31708F; background-color: #D9EDF7; border-color: #BCE8F1;}
+.rui-panel-yellow {border-color: #FAEBCC;}
+.rui-panel-yellow>.rui-panel-head, .rui-panel-yellow>summary {color: #8A6D3B; background-color: #FCF8E3; border-color: #FAEBCC;}
+.rui-panel-red {border-color: #EBCCD1;}
+.rui-panel-red>.rui-panel-head, .rui-panel-red>summary {color: #A94442; background-color: #F2DEDE;border-color: #EBCCD1;}
 
 /* 内容面板 -- End */
 
