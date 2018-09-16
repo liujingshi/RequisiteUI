@@ -426,3 +426,9 @@
             在下拉选择框的 `<select>` 标签加上 `search` 属性即可
 
             示例: `<select name='select' search></select>`
+
+        * 文本域
+
+            `<textarea></textarea>`
+
+            就是这样
