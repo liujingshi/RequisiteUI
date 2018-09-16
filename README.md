@@ -432,3 +432,54 @@
             `<textarea></textarea>`
 
             就是这样
+
+* 表格
+    * 快速使用
+
+            <table>
+                <colgroup>
+                    <col width="150">
+                    <col width="250">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>电话</th>
+                        <th>地址</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>张三</td>
+                        <td>123456789</td>
+                        <td>沈阳</td>
+                    </tr>
+                    <tr>
+                        <td>李四</td>
+                        <td>987654321</td>
+                        <td>大连</td>
+                    </tr>
+                    <tr>
+                        <td>王五</td>
+                        <td>987004321</td>
+                        <td>东港</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    * 使用方法
+
+        这个表格是静态表格 使用方法和正常的 `<table>` 表格一样
+
+        值得注意的是
+
+        `<colgroup>` 在这里是控制每列的宽度的 可有可无
+
+        `<thead>` 必须有 定义表头 内部必须有 `<tr>` 标签, `<tr>` 标签内部必须是 `<th>` 标签
+
+        `<tbody>` 必须有 表身的内容 内部 `<tr>` 标签里必须是 `<td>` 标签
+
+        表格默认宽度 `100%`
+
+
